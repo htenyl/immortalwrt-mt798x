@@ -47,7 +47,7 @@ jobs:
       - name: 加载defconfig设置
         run: |
           cd $REPOSITORY_DIR
-          cp -f $GITHUB_WORKSPACE/config/immortalwrt-hanwckf.config .config
+          cp -f $GITHUB_WORKSPACE/defconfig/mt7981-ax3000.config .config
           make defconfig
 
       - name: 下载依赖
