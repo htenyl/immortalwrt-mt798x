@@ -8,7 +8,7 @@ on:
 env:
   TZ: Asia/Shanghai
   MY_WORKSPACE: /home/runner
-  REPOSITORY_URL: https://github.com/hanwckf/immortalwrt-mt798x
+  REPOSITORY_URL: https://github.com/htenyl/immortalwrt-mt798x
   REPOSITORY_CID: 
   REPOSITORY_DIR: /home/runner/immortalwrt
   FIRMWARE_DIR: /home/runner/immortalwrt/bin/targets/mediatek/mt7981
@@ -47,7 +47,6 @@ jobs:
       - name: 加载defconfig设置
         run: |
           cd $REPOSITORY_DIR
-          cp -f $GITHUB_WORKSPACE/defconfig/mt7981-ax3000.config .config
           make defconfig
 
       - name: 下载依赖
