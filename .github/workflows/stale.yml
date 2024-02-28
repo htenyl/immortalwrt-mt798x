@@ -62,7 +62,7 @@ jobs:
         if: ${{ !cancelled() && steps.download.outputs.status == 'success' }}
         run: |
           cd $REPOSITORY_DIR
-          make -j$(nproc) V=s
+          make V=s -j$(nproc)
           cd $FIRMWARE_DIR
           rm -rf packages
           echo "status=success" >> $GITHUB_OUTPUT
